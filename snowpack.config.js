@@ -6,7 +6,7 @@ module.exports = {
 	extends: "@snowpack/app-scripts-svelte",
 	mount: {
 		public: { url: "/", static: true },
-		src: "/_dist_",
+		src: "/dist",
 		assets: {url: "/assets",static: true}
 	},
 	plugins: [
@@ -26,6 +26,7 @@ module.exports = {
 	},
 	buildOptions: {
 		clean: true,
+		metaUrlPath: "snowpack",
 	},
 	optimize: {
 		bundle: true,
