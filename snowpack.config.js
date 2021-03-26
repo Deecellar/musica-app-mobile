@@ -7,6 +7,7 @@ module.exports = {
 	mount: {
 		public: { url: "/", static: true },
 		src: "/_dist_",
+		assets: {url: "/assets",static: true}
 	},
 	plugins: [
 		[
@@ -14,6 +15,7 @@ module.exports = {
 			{ cmd: "postcss", input: [".css"], output: [".css"] },
 		],
 		"@snowpack/plugin-typescript",
+		'@snowpack/plugin-sass'
 	],
 	packageOptions: {
 		installTypes: true,
